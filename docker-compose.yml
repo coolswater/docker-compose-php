@@ -34,11 +34,11 @@ services:
     image: mysql:5.6
     environment:
       - TZ=Asia/Shanghai
-      - MYSQL_ROOT_PASSWORD: 7krYJ1bsFQ
+      - MYSQL_ROOT_PASSWORD=7krYJ1bsFQ
     ports:
       - 3306:3306
     networks:
-      - lnmp
+      - nginx-php
     volumes:
       - ./mysql/conf:/etc/mysql/conf.d
       - ./mysql/data:/var/lib/mysql
